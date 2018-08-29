@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QueryPlan xmlns="http://www.sankuai.com/schema/stargate"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.sankuai.com/schema/stargate
+           http://www.sankuai.com/schema/stargate.xsd ">
+
+    <QueryConfig bizType="query_list" description="查询列表信息">
+        <QueryNodes>
+            <QueryNode>
+                <Name>query_item</Name>
+                <Service>itemQueryService</Service>
+                <Timeout>100</Timeout>
+            </QueryNode>
+            <QueryNode>
+                <Name>query_order</Name>
+                <Service>orderQueryService</Service>
+                <Timeout>500</Timeout>
+            </QueryNode>
+            <QueryNode>
+                <Name>query_user</Name>
+                <Service>userQueryService</Service>
+                <Timeout>500</Timeout>
+            </QueryNode>
+        </QueryNodes>
+    </QueryConfig>
+
+</QueryPlan>

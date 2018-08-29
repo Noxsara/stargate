@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://www.sankuai.com/schema/stargate"
+            targetNamespace="http://www.sankuai.com/schema/stargate" elementFormDefault="qualified">
+    <xsd:element name="QueryPlan">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[所有的查询计划]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element name="QueryConfig" type="config"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="config">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[一个并行查询配置]]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="QueryNodes" type="nodes"/>
+        </xsd:sequence>
+        <xsd:attribute name="bizType" type="xsd:string" use="required"/>
+        <xsd:attribute name="description" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="nodes">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[所有查询节点]]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="QueryNode" type="node"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="node">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[单个查询节点]]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="Service" type="xsd:string"/>
+            <xsd:element name="Timeout" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+
