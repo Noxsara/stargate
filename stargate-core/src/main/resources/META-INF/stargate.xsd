@@ -14,7 +14,7 @@
     </xsd:element>
     <xsd:complexType name="config">
         <xsd:annotation>
-            <xsd:documentation><![CDATA[一个并行查询配置]]]></xsd:documentation>
+            <xsd:documentation><![CDATA[一个并行查询配置]]></xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="QueryNodes" type="nodes"/>
@@ -24,7 +24,7 @@
     </xsd:complexType>
     <xsd:complexType name="nodes">
         <xsd:annotation>
-            <xsd:documentation><![CDATA[所有查询节点]]]></xsd:documentation>
+            <xsd:documentation><![CDATA[所有查询节点]]></xsd:documentation>
         </xsd:annotation>
         <xsd:sequence maxOccurs="unbounded">
             <xsd:element name="QueryNode" type="node"/>
@@ -32,7 +32,7 @@
     </xsd:complexType>
     <xsd:complexType name="node">
         <xsd:annotation>
-            <xsd:documentation><![CDATA[单个查询节点]]]></xsd:documentation>
+            <xsd:documentation><![CDATA[单个查询节点]]></xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="Name" type="xsd:string"/>
