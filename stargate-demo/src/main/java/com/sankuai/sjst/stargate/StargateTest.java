@@ -33,7 +33,7 @@ public class StargateTest {
         orderIds.add(2L);
         allParam.setOrderIds(orderIds);
 
-        QueryWorker worker = QueryWorker.getInstance(null, new ParamFactory<AllParam>() {
+        QueryWorker worker = QueryWorker.getInstance(allParam, new ParamFactory<AllParam>() {
             @Override
             protected void initialize(AllParam params) {
                 UserParam userParam = new UserParam();
